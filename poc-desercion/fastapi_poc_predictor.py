@@ -193,7 +193,7 @@ app.add_middleware(
         "https://https://v0-student-dropout-prediction-tau.vercel.app/",
         "http://localhost:3000",
     ],
-    allow_credentials=true,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
