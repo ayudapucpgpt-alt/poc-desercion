@@ -1,5 +1,5 @@
 from __future__ import annotations
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware #hola
 import json
 from pathlib import Path
 from typing import Literal
