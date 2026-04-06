@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from fastapi.middleware.cors import CORSMiddleware
 import json
 from pathlib import Path
 from typing import Literal
@@ -187,6 +187,17 @@ def predict_from_form(user_input: dict) -> dict:
 
 
 app = FastAPI(title="PoC Predicción de Deserción", version="0.2.0")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://https://v0-student-dropout-prediction-tau.vercel.app/",
+        "http://localhost:3000",
+    ],
+    allow_credentials=true,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 
 @app.get("/")
